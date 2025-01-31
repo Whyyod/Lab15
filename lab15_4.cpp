@@ -18,4 +18,22 @@ int main(){
 	return 0;
 }
 
-//Do not modify source code above this line
+void shuffle(int &a,int &b,int &c,int &d){
+	int Z[] = { a , b , c , d} ;
+	a = Z[rand()%4];
+
+	while (b == a )
+	{
+		b = Z[rand()%4];
+	}
+	while (c == b || c == a )
+	{
+		c = Z[rand()%4];
+	}
+	while (d == a || d == b || d == c )
+	{
+		d = Z[rand()%4];
+	}
+	
+
+} 
